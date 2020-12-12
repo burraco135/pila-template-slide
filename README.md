@@ -69,7 +69,7 @@ In questo programma, tutti i file `.h` contengono tutte le implementazioni, quin
 1. `Pila()`
     * Costruttore dell'oggetto `Pila`
 2. `Pila(int)`
-    * Costruttore dell'oggetto `Pila`
+    * Costruttore dell'oggetto `Pila` che prende in input il valore della grandezza della pila
 3. `~Pila()`
     * Distruttore dell'oggetto `Pila`
 4. `void creaPila()`
@@ -87,16 +87,29 @@ In questo programma, tutti i file `.h` contengono tutte le implementazioni, quin
 9. `void stampPila(Pila &p)`
     * Stampa tutti gli elementi di una pila
 
+## Operatori della classe `class Libro`
+1. Costruttori
+    1. Default
+        * `Libro()`
+    2. Distruttore
+        * `~Libro()`
+2. `void setTitolo(string)`
+    * Inserisce un elemento di tipo stringa nella lista
+3. `string getTitolo() const`
+    * Restituisce il titolo di un elemento
+4. `bool operator==(Libro)`
+    * Sovraccarica l'operatore == per permetterne l'output
+
 ## Nota sull'uso della espressione finale `const`
 La dicitura `<nome_funzione> () const` viene utilizzata quando non si desidera modificare i dati della struttura in uso.
 Nel programma, questa viene usata nei seguenti metodi:
-* `tipoelem getElemento() const;`
+* `string getTitolo() const;`
 * `bool pilaVuota() const;`
 * `tipoelem leggiPila() const;`
 
 ## Nota sul sovraccarico degli operatori
 In questo programma c'è il sovraccarico dell'operatore `<<` e dell'operatore `==`.
-Entrambi si trovano in `nodo.h` e servono per la classe `Libro`.
+Entrambi si trovano in `libro.h` e servono per la classe `Libro`.
 * `std::ostream& operator<<(std::ostream&, const Libro &l);`
   * Si occupa di permettere la stampa degli elementi di tipo Nodo come se fossero dati normali
     * In questo modo quando viene utilizzato `cout <<` non ci saranno problemi se l'oggetto da stampare ha un tipo definito dall'utente
