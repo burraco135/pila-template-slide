@@ -22,11 +22,11 @@ Questo tipo di accesso garantisce l'inserimento dei dati all'inizio della pila (
 
 # Specifica semantica della struttura dati
 ## Tipi di dato
-* pila: insieme delle sequenze p = <a1, a2, …, an>, n >= 0, di elementi di tipo tipoelem gestita con accesso LIFO
+* **pila**: insieme delle sequenze p = <a1, a2, …, an>, n >= 0, di elementi di tipo **tipoelem** gestita con accesso LIFO (vedi introduzione)
   * Identificatore pila: p
   * Identificatore pila aggiornata: p'
   * Identificatore tipoelem: a
-* boolean: insieme dei valori di verità
+* **boolean**: insieme dei valori di verità
   * Identificatore boolean: b
 
 ## Operatori
