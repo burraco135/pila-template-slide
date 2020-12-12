@@ -65,6 +65,7 @@ T Pila<T>::leggiPila() const {
 template <class T>
 void Pila<T>::fuoriPila() {
 	if ( !pilaVuota() ) {
+    
 		testa--;
 	} else {
 		cout << "Nessun elemento nella pila" << endl;
@@ -83,7 +84,7 @@ void Pila<T>::inPila(tipoelem a) {
 
 template<class T>
 void Pila<T>::stampaPila(Pila<T> &p) {
-	for (int i = 0; i < p.testa; i++) {
+	for (int i = p.testa-1; i >= 0 ; i--) {
 		cout << "|" << p.elementi[i] << "|" << endl ;
 	}
 	
